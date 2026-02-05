@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36705.20
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalManagment.API", "ApprovalManagment.API.csproj", "{A6F485F9-7380-490C-9D3E-68701B2B8897}"
+	ProjectSection(ProjectDependencies) = postProject
+		{18626C1D-B2FD-4D7D-AAE8-456DF880B831} = {18626C1D-B2FD-4D7D-AAE8-456DF880B831}
+		{51B3BF98-7CB9-41F9-8520-FAC40568D263} = {51B3BF98-7CB9-41F9-8520-FAC40568D263}
+		{5EC6FB22-1B4C-4BB3-9DAD-08FEC1E78B54} = {5EC6FB22-1B4C-4BB3-9DAD-08FEC1E78B54}
+		{9211BEA6-92EF-4DA7-A732-66E51295134F} = {9211BEA6-92EF-4DA7-A732-66E51295134F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalManagment.Domain", "..\ProductManagment.Domain\ApprovalManagment.Domain.csproj", "{9211BEA6-92EF-4DA7-A732-66E51295134F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalManagment.Persistence", "..\ProductManagment.Presistance\ApprovalManagment.Persistence.csproj", "{5EC6FB22-1B4C-4BB3-9DAD-08FEC1E78B54}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9211BEA6-92EF-4DA7-A732-66E51295134F} = {9211BEA6-92EF-4DA7-A732-66E51295134F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalManagment.Service", "..\ProductManagment.Service\ApprovalManagment.Service.csproj", "{51B3BF98-7CB9-41F9-8520-FAC40568D263}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9211BEA6-92EF-4DA7-A732-66E51295134F} = {9211BEA6-92EF-4DA7-A732-66E51295134F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApprovalManagment.Repository", "..\ProductManagment.Repository\ApprovalManagment.Repository.csproj", "{18626C1D-B2FD-4D7D-AAE8-456DF880B831}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9211BEA6-92EF-4DA7-A732-66E51295134F} = {9211BEA6-92EF-4DA7-A732-66E51295134F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6F485F9-7380-490C-9D3E-68701B2B8897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F485F9-7380-490C-9D3E-68701B2B8897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F485F9-7380-490C-9D3E-68701B2B8897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F485F9-7380-490C-9D3E-68701B2B8897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9211BEA6-92EF-4DA7-A732-66E51295134F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9211BEA6-92EF-4DA7-A732-66E51295134F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9211BEA6-92EF-4DA7-A732-66E51295134F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9211BEA6-92EF-4DA7-A732-66E51295134F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EC6FB22-1B4C-4BB3-9DAD-08FEC1E78B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EC6FB22-1B4C-4BB3-9DAD-08FEC1E78B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EC6FB22-1B4C-4BB3-9DAD-08FEC1E78B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EC6FB22-1B4C-4BB3-9DAD-08FEC1E78B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B3BF98-7CB9-41F9-8520-FAC40568D263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B3BF98-7CB9-41F9-8520-FAC40568D263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B3BF98-7CB9-41F9-8520-FAC40568D263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B3BF98-7CB9-41F9-8520-FAC40568D263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18626C1D-B2FD-4D7D-AAE8-456DF880B831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18626C1D-B2FD-4D7D-AAE8-456DF880B831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18626C1D-B2FD-4D7D-AAE8-456DF880B831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18626C1D-B2FD-4D7D-AAE8-456DF880B831}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B992A96C-5F05-40AE-B947-6752C3E1B1C4}
+	EndGlobalSection
+EndGlobal
