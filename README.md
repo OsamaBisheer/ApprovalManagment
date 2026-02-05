@@ -1,24 +1,7 @@
-You can use the database I put for you in a folder named ProductManagment.DB , and login with the username: Ahmed and the password: 123456
-ofcourse you can also run: update-database and create the database from scratch with fresh state and create your users and data.
+You can use the database I put for you in a folder named ApprovalManagment.DB , and login with one of three usernames: Employee , Admin , Manager and the password: Test@123 for all ofcourse you can also run: update-database and create the database from scratch with fresh state and create your users and data but in this case you should use this because you have to add managers and admins manually: insert into [ApprovalManagmentDB].[dbo].[AspNetUsers] (Id,ManagerId,Department,RemainingLeaveBalance,UserName,NormalizedUserName,Email,NormalizedEmail,EmailConfirmed,PasswordHash,SecurityStamp,ConcurrencyStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEnd,LockoutEnabled,AccessFailedCount) values('e3118751-9389-4d94-8e27-1573b7b4c923', NULL, 1, 0, 'Manager', 'MANAGER', 'Manager@Manager.com', 'MANAGER@MANAGER.COM', 1, 'AQAAAAIAAYagAAAAEBo04DQ6doMWniRrjKsy82et9MU6HR6Nk9V9fL8HAdzkXGDoQRSDMQsUuCy+sEaP1g==','VL7LOR4C7NWC43NWBTBEYXB4A5FHPCBS', '68e7812a-fd6b-419a-b1d5-55d9c137443a', 123456, 0, 0, NULL, 1, 0), ('eefe716f-f513-452c-990a-2f04392f2135', NULL, 1, 0, 'Admin', 'ADMIN', 'Admin@Admin.com', 'ADMIN@ADMIN.COM', 1, 'AQAAAAIAAYagAAAAEAoK8q63GEtIC8KslvQSpzx60vrB/3AGqq8VNJGzaeKQ+5a+RFQ3U1brOE5yR8TCbw==', 'X6ZG6HOHLMXY6QI33CPMZR54ILH73JPW', '19d94124-2a3e-415b-a7ca-00dfe84fa73b', 123456, 0,0, NULL, 1, 0).
 
-I create the project using the clean architecture dividing it to 5 layers (API, Service, Repository, Presistance, Domain):
-1- Domain:
-  Inculdes entities, view models, all needed interfaces (for dbcontext, unitofwork, repositories, services, etc).
-2- Presistance:
-  Inculde the dbContext implementaion and migrations. It dependes on Domain because it need entities for dbContext implementaion(dbsets<entity> for example).
-3- Repository:
-  Inculde unit of work and repositories implementaions. It depends on Domain to access entities and interfaces for dbcontext, repositories and unit of work.
-4- Service:
-  Inculde Services implementaions and mapping profiles. It depends on Domain to access entities, view models and interfaces for services and unit of work.
-5- API:
-  Responsable for configring almost all configrtions in the project via the program file and it use appsettings to do so. In program we use the basic configurations for some components like routing , use authentication, use authroization, etc. we configure other components also with custom configrations like:
-  - Adding Swagger Gen to be able to add authroization header
-  - Adding AutoMapper
-  - Adding DBContext and it's Sql Server connection string
-  - Adding CorsPolicy
-  - Adding Dependency injections for all interfaces and there implementions
-  - Adding Identity options that will be used on create user endpoint
-  - Adding JWT validate token handler
-  - Adding Serilog logger and use builtin .Net 8 ExceptionHandler middleware
+I create the project using the clean architecture dividing it to 5 layers (API, Service, Repository, Presistance, Domain): 1- Domain: Inculdes entities, view models, all needed interfaces (for dbcontext, unitofwork, repositories, services, etc). 2- Presistance: Inculde the dbContext implementaion and migrations. It dependes on Domain because it need entities for dbContext implementaion(dbsets for example). 3- Repository: Inculde unit of work and repositories implementaions. It depends on Domain to access entities and interfaces for dbcontext, repositories and unit of work. 4- Service: Inculde Services implementaions and mapping profiles. It depends on Domain to access entities, view models and interfaces for services and unit of work. 5- API: Responsable for configring almost all configrtions in the project via the program file and it use appsettings to do so. In program we use the basic configurations for some components like routing , use authentication, use authroization, etc. we configure other components also with custom configrations like:
 
-  Ofcourse it depends on all other layers to do so. and ofcourse it has all controllers and there endpoints.
+Adding Swagger Gen to be able to add authroization header Adding AutoMapper Adding DBContext and it's Sql Server connection string Adding CorsPolicy Adding Dependency injections for all interfaces and there implementions Adding Identity options that will be used on create user endpoint Adding JWT validate token handler Adding Serilog logger and use builtin .Net 8 ExceptionHandler middleware Ofcourse it depends on all other layers to do so. and ofcourse it has all controllers and there endpoints.
+
+In the end, I just want to say feel free to review and test the project and you can also ask me about anything unclear on it.
